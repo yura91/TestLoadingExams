@@ -5,54 +5,5 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.MainActivity">
-
-        <!--<ImageView
-            android:id="@+id/logo"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:src="@mipmap/ic_launcher"
-            android:scaleType="centerCrop"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-        <br.com.sapereaude.maskedEditText.MaskedEditText
-            android:id="@+id/phoneInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/logo"
-            android:layout_marginTop="20dp"
-            android:inputType="phone"
-            android:typeface="monospace"
-            mask:allowed_chars="1234567890"
-            mask:mask="+7(###)###-##-##"
-            android:hint="1234567890"
-            app:keep_hint="true"
-            />
-
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:hint="Password"
-            app:layout_constraintTop_toBottomOf="@id/phoneInput"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-        <Button
-            android:id="@+id/signIn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="@color/white"
-            app:layout_constraintStart_toStartOf="parent"
-            android:textColor="@color/black"
-            android:text="SIGN IN"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/password"
-            />-->
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        tools:context=".ui.MainActivity" />
 </layout>

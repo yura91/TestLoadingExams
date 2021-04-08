@@ -1,5 +1,6 @@
 package com.example.testlistfromserver.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -27,11 +28,16 @@ class MaskViewModel(
                 _mask.value = mask
 //                _posts.value = listOf(user)
             } catch (t: Throwable) {
+                Log.d("error", t.message!!)
 //                _posts.value = emptyList()
 //                _error.value = t
             } finally {
 //                _loading.value = false
             }
         }
+    }
+
+    override fun onCleared() {
+        super.onCleared()
     }
 }

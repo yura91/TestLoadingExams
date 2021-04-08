@@ -27,6 +27,5 @@ class MainActivity : AppCompatActivity() {
             beginTransaction.add(R.id.container, mainFragment).commit()
         }
         viewModel.getPhoneMask()
-//        supportFragmentManager.beginTransaction().add(R.id.container, MainFragment()).commit()
     }
 }

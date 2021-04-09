@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
             val args = Bundle()
             args.putString("mask", it.phoneMask)
             mainFragment.arguments = args
+            beginTransaction.addToBackStack(null)
             beginTransaction.add(R.id.container, mainFragment).commit()
         }
         viewModel.getPhoneMask()

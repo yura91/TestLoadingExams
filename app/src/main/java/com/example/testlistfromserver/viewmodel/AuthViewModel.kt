@@ -18,11 +18,11 @@ class AuthViewModel(
     val error: LiveData<Throwable> get() = _error
     private val _loading: MutableLiveData<Boolean> = MutableLiveData()
 
-    fun auth(phone: String, password: String) {
+    fun auth(phone: String) {
         viewModelScope.launch {
             _loading.value = true
             try {
-                val auth = repository.authReq(phone, password)
+                val auth = repository.authReq(phone)
                 _auth.value = auth
 //                _posts.value = listOf(user)
             } catch (t: Throwable) {

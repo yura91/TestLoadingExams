@@ -7,8 +7,7 @@ import java.io.IOException
 import java.lang.reflect.Type
 
 
-class CustomCallAdapter<T>(returnType: Type) : CallAdapter<T, T> {
-    private val returnType: Type
+class CustomCallAdapter<T>(private val returnType: Type) : CallAdapter<T, T> {
     override fun responseType(): Type {
         return returnType
     }
@@ -32,7 +31,4 @@ class CustomCallAdapter<T>(returnType: Type) : CallAdapter<T, T> {
         }
     }
 
-    init {
-        this.returnType = returnType
-    }
 }

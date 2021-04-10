@@ -1,9 +1,6 @@
 package com.example.testlistfromserver.api
 
-import com.example.testlistfromserver.model.AuthResponse
-import com.example.testlistfromserver.model.NetworkResponse
-import com.example.testlistfromserver.model.PhoneMask
-import com.example.testlistfromserver.model.Post
+import com.example.testlistfromserver.model.*
 import kotlinx.coroutines.Deferred
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -17,14 +14,14 @@ import retrofit2.http.POST
 interface DevExamApi {
 
     @GET("api/v1/posts")
-    fun getPosts(): Deferred<NetworkResponse<List<Post>, Error>>
+    suspend fun getPosts(): NetworkResponse<List<Post>, Error>
 
     @GET("api/v1/phone_masks")
-    fun getPhoneMasks(): Deferred<NetworkResponse<PhoneMask, Error>>
+    suspend fun getPhoneMasks(): NetworkResponse<PhoneMask, Error>
 
     @FormUrlEncoded
     @POST("api/v1/auth")
-    fun authRequest(
+    suspend fun authRequest(
         @Field("phone") phone: String?,
         @Field("password") password: String? = "devExam18"
 

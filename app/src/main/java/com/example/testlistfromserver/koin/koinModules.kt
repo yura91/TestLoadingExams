@@ -2,6 +2,7 @@ package com.example.testlistfromserver
 
 import com.example.testlistfromserver.api.DevExamApi
 import com.example.testlistfromserver.koin.createApi
+import com.example.testlistfromserver.koin.createMoshi
 import com.example.testlistfromserver.koin.provideOkHttpClient
 import com.example.testlistfromserver.koin.provideRetrofit
 import com.example.testlistfromserver.repository.*
@@ -25,6 +26,7 @@ val repositoryModule = module {
 
 val remoteModule = module {
     single { provideOkHttpClient() }
-    single { provideRetrofit(get()) }
+    single { createMoshi() }
+    single { provideRetrofit(get(), get()) }
     single { createApi<DevExamApi>(get()) }
 }

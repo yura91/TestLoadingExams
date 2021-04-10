@@ -7,6 +7,6 @@ import kotlinx.coroutines.withContext
 class DevExRepositoryImpl(private val api: DevExamApi) : DevExRepository {
     override suspend fun devExAll() =
         withContext(Dispatchers.IO) {
-            api.getPosts().await()
+            api.getPosts()
         }
 }

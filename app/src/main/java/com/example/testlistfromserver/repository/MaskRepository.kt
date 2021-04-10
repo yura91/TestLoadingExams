@@ -1,8 +1,9 @@
 package com.example.testlistfromserver.repository
 
-import com.example.testlistfromserver.model.NetworkResponse
+import androidx.lifecycle.LiveData
 import com.example.testlistfromserver.model.PhoneMask
 
 interface MaskRepository {
-    suspend fun getPhoneMask(): NetworkResponse<PhoneMask, Error>
+    val mask: LiveData<PhoneMask>
+    suspend fun getPhoneMask()
 }

@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 class MaskViewModel(
     private val repository: MaskRepository
 ) : ViewModel() {
-    private val _mask: MutableLiveData<PhoneMask> = MutableLiveData()
+    private val _mask: LiveData<PhoneMask> = repository.mask
 
     private val _loading: MutableLiveData<Boolean> = MutableLiveData()
 
@@ -24,8 +24,7 @@ class MaskViewModel(
         viewModelScope.launch {
             _loading.value = true
             try {
-                val mask = repository.getPhoneMask()
-                _mask.value = mask
+                repository.getPhoneMask()
 //                _posts.value = listOf(user)
             } catch (t: Throwable) {
                 Log.d("error", t.message!!)

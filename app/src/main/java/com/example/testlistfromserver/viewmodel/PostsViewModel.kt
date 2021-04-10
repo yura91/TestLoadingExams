@@ -28,7 +28,7 @@ class PostsViewModel(
         viewModelScope.launch {
             _loading.value = true
             try {
-                _posts.value = repository.devExAll()
+//                _posts.value = repository.devExAll()
                 _loading.value = false
             } catch (t: Throwable) {
                 _posts.value = emptyList()

@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 class AuthViewModel(
     private val repository: AuthRepository
 ) : ViewModel() {
-    private val _auth: MutableLiveData<AuthResponse> = MutableLiveData()
+    private val _auth: LiveData<AuthResponse> = repository.auth
     val auth: LiveData<AuthResponse> get() = _auth
 
     private val _error: MutableLiveData<Throwable> = MutableLiveData()
@@ -22,8 +22,7 @@ class AuthViewModel(
         viewModelScope.launch {
             _loading.value = true
             try {
-                val auth = repository.authReq(phone)
-                _auth.value = auth
+                repository.authReq(phone)
 //                _posts.value = listOf(user)
             } catch (t: Throwable) {
 //                _posts.value = emptyList()

@@ -1,4 +1,4 @@
-package com.example.testlistfromserver.model
+package com.example.testlistfromserver.retrofitconverters
 
 import retrofit2.Call
 import retrofit2.CallAdapter

@@ -1,6 +1,10 @@
 package com.example.testlistfromserver.api
 
-import com.example.testlistfromserver.model.*
+import com.example.testlistfromserver.model.AuthResponse
+import com.example.testlistfromserver.model.Error
+import com.example.testlistfromserver.model.PhoneMask
+import com.example.testlistfromserver.model.Post
+import com.example.testlistfromserver.retrofitconverters.NetworkResponse
 import kotlinx.coroutines.Deferred
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded

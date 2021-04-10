@@ -1,4 +1,4 @@
-package com.example.testlistfromserver.model
+package com.example.testlistfromserver.retrofitconverters
 
 import okhttp3.ResponseBody
 import retrofit2.Call

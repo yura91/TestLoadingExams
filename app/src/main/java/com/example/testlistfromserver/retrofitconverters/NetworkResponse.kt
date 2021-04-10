@@ -1,4 +1,4 @@
-package com.example.testlistfromserver.model
+package com.example.testlistfromserver.retrofitconverters
 
 import java.io.IOException
 

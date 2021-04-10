@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.testlistfromserver.api.DevExamApi
 import com.example.testlistfromserver.model.AuthResponse
-import com.example.testlistfromserver.model.NetworkResponse
+import com.example.testlistfromserver.retrofitconverters.NetworkResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

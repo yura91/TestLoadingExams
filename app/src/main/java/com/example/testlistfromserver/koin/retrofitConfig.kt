@@ -1,7 +1,7 @@
 package com.example.testlistfromserver.koin
 
 import com.example.testlistfromserver.BuildConfig
-import com.example.testlistfromserver.model.NetworkResponseAdapterFactory
+import com.example.testlistfromserver.retrofitconverters.NetworkResponseAdapterFactory
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.squareup.moshi.Moshi
 import okhttp3.OkHttpClient
